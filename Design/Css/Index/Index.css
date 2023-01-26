@@ -1,0 +1,21 @@
+*{
+    /* Esta propiedad hace que los elementos no tengan
+       mas tamaño del que yo le di.
+    */
+    box-sizing: border-box; 
+}
+
+/* 
+    em: tamanio relativo a la fuente que use.
+*/
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+
+
+body{
+    margin:0;
+}
+
