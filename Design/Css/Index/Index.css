@@ -17,9 +17,11 @@ body{
 */
 
 h1{ font-size: 3.0em; color: white;}
-h2{ font-size: 2.2em;}
-h3{ font-size: 1.7em;}
-p{ font-size: 1em; color: white;}
+h2{ font-size: 2.2em; color: white}
+h3{ font-size: 1.7em; color: white}
+h4{ font-size: 0.55em; color: white; }
+h5{ font-size: 0.7em; color: white;}
+p{ font-size: 1.5em; color: white;}
 ul{ list-style: none;}
 
 button{
@@ -42,7 +44,7 @@ button:hover{
 }
 
 .container{
-    max-width: 1000px; /* Fix */
+    max-width: 1400px; /* Fix */
     margin: auto;
 }
 
@@ -53,6 +55,8 @@ header{
 header .logo{
     margin: 0;
     padding: 25px 30px;
+    margin-bottom: -30px;
+    margin-top: -20px;
 }
 
 header .container{
@@ -71,10 +75,63 @@ header .container{
     color: white;
 }
 
+nav{
+    margin-top: -45px;
+}
 
+nav button{
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px rgb(255, 255, 255);
+    color: white;
+    background-color: black;
+}
 
-  
-/*
-"../../../Media/logo.jpg"
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 10px;
+}
 
-*/
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+header a:hover{
+    background-color: rgb(255, 255, 250);
+    color: black;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgb(87, 87, 87);
+    font-weight: bold;
+    box-shadow: 1px 1px 15px rgb(0, 0, 0);
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px rgb(255, 255, 255);
+    color: white;
+    flex-direction: column;
+    height: 90vh; /* el tamaño de pantalla que ocupa en un telefono */
+    background: linear-gradient(to bottom, rgba(0,0,0, 0), rgba(0,0,0, 200)),
+    url( "../../../Media/Somewhere in the ocean (Cover).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+footer{
+    text-align: center;
+}
+
