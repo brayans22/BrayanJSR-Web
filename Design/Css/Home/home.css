@@ -1,0 +1,156 @@
+*{
+    /* Esta propiedad hace que los elementos no tengan
+       mas tamaño del que yo le di.
+    */
+    box-sizing: border-box; 
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    margin:0;
+}
+
+
+/* 
+    em: tamanio relativo a la fuente que use.
+*/
+
+h1{ font-size: 2.7em; color: white;}
+h2{ font-size: 1.9em; color: white}
+h3{ font-size: 1.7em; color: white}
+h4{ font-size: 0.7em; color: white; }
+h5{ font-size: 0.7em; color: white;}
+p{ font-size: 1.9em; color: white; font-weight: bold;}
+ul{ list-style: none;}
+
+button{
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px rgb(255, 255, 255);
+    color: white;
+    background-color: black;
+}
+
+/* cuando paso el cursor por encima
+   del boton */
+
+button:hover{
+    background-color: rgb(255, 255, 250);
+    color: black;
+}
+
+.container{
+    max-width: 1400px; /* Fix */
+    margin: auto;
+}
+
+header{
+    background-color: rgb(10, 10, 10);
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    margin-bottom: -30px;
+    margin-top: -5px;
+}
+
+header .container{
+    display: flex; /* Para centrar */
+    flex-direction: column; /* Para Que se mueva al costado cuando estoy en la version web el nav */
+    align-items: center; /* Alinea los items en el centro */
+}
+
+.circular-logo img{
+    width: 150px;
+    height: 150px;
+    margin-top: 40px;
+    border-radius: 300px;
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
+    color: white;
+}
+
+nav{
+    margin-top: -60px;
+}
+
+nav button{
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px rgb(255, 255, 255);
+    color: white;
+    background-color: black;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+header a:hover{
+    background-color: rgb(255, 255, 250);
+    color: black;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgb(87, 87, 87);
+    font-weight: bold;
+    box-shadow: 1px 1px 15px rgb(0, 0, 0);
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px rgb(255, 255, 255);
+    color: white;
+    flex-direction: column;
+    height: 90vh; /* el tamaño de pantalla que ocupa en un telefono */
+    background: linear-gradient(to bottom, rgba(0,0,0, 0), rgba(0,0,0, 200)),
+    url( "../../../Media/Somewhere in the ocean (Cover).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(0, 0, 5);
+}
+
+.fa {
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px rgb(255, 255, 255);
+}
+
+.fa:hover {
+    background-color: rgb(255, 255, 250);
+    color: black;
+}
+  
+/* Facebook */
+.fa-facebook {
+    background: black;
+    color: white;
+}
