@@ -41,6 +41,7 @@ button{
 button:hover{
     background-color: rgb(255, 255, 250);
     box-shadow: 1px 1px 15px rgb(255, 255, 255);
+    cursor: pointer;
     color: black;
 }
 
@@ -91,15 +92,9 @@ nav button{
     color: white;
 }
 
-:target, header a:hover{
+header a:hover{
     box-shadow: 1px 1px 8px rgb(255, 255, 255);
     border-radius: 10px;
-}
-
-:target{
-    color: white;
-    border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
 }
 
 header nav{
@@ -107,6 +102,12 @@ header nav{
     flex-direction: column;
     text-align: center;
     padding-bottom: 10px;
+}
+
+a.active{
+    color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
 }
 
 header a{
