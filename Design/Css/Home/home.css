@@ -38,17 +38,47 @@ header
     align-items: center;
 }
 
-header a:hover
+header nav
+{
+    flex-direction: column;
+}
+
+header a:hover,
+header .logo-brayanjsr-sign-up:hover,
+header img:hover,
+header a:active
 {
     background-color: rgb(255, 255, 250);
     box-shadow: 1px 1px 8px rgb(255, 255, 255);
     color:black;
+    transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
 }
 
 .logo-brayanjsr
 {
     display: flex;
     align-items: center;
+}
+    
+.logo-brayanjsr-hidden-message 
+{
+    font-size: 0.6em;
+    position: absolute; /* Colocar el mensaje justo debajo de la sección superior */
+    height: 50px;
+    width: 132px;
+    margin-top: -20px;
+    text-align: center;
+    display: none;
+}
+
+.logo-brayanjsr-name:hover
+{
+    align-items: center;
+}
+
+.logo-brayanjsr-name:hover .logo-brayanjsr-hidden-message 
+{
+    display: block;
 }
 
 .logo-brayanjsr img
@@ -64,21 +94,23 @@ header a:hover
 
 .logo-brayanjsr-name
 {
+    position: relative;
     width: 150px;
     margin-left: 15px;
     font-size: 1.4em;
 }
 
-#sign-up
+.logo-brayanjsr-sign-up
 {
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: bold;
-    padding: 35px 10px;
-    border-radius: 2px;
+    padding: 10px 15px;
+    border-radius: 20px;
     border: 2px solid rgb(255, 255, 255);
     box-shadow: 1px 1px 5px rgb(255, 255, 255);
     float: right;
     margin-right: 15px;
+    position: relative;
 }
 
 nav#main-nav a
@@ -87,8 +119,6 @@ nav#main-nav a
     font-weight: bold;
     padding: 8px 10px;
     border-radius: 20px;
-    border: 2px solid rgb(255, 255, 255);
-    box-shadow: 1px 1px 5px rgb(255, 255, 255);
     display: inline-block;
     margin-left: 5px;
     margin-right: 1px;

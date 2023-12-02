@@ -105,6 +105,7 @@ header a:hover{
     background-color: rgb(255, 255, 250);
     box-shadow: 1px 1px 8px rgb(255, 255, 255);
     color: black;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
 footer{
