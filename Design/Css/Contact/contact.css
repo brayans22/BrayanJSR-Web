@@ -70,11 +70,13 @@ header .container{
 }
 
 
-nav{
+nav
+{
     margin-top: -39px;
 }
 
-nav button{
+nav nav_link
+{
     font-size: 1em;
     font-weight: bold;
     padding: 10px 10px;
