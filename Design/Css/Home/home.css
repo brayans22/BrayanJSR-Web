@@ -15,11 +15,11 @@ body
     em: tamanio relativo a la fuente que use.
 */
 a{ font-size: 1.3em; }
-h1{ font-size: 1.4em; color: white;}
+h1{ font-size: 1.6em; color: white;}
 h2{ font-size: 1.1em; color: white}
 h3{ font-size: 1.0em; color: white}
 h4{ font-size: 0.8em; color: white; }
-h5{ font-size: 0.7em; color: white;}
+h5{ font-size: 0.6em; color: white;}
 p{ font-size: 1.6em; color: white; font-weight: bold;}
 ul{ list-style: none;}
 
@@ -44,6 +44,7 @@ header nav
 }
 
 header a:hover,
+.social-media-brayanjsr a img:hover,
 header .logo-brayanjsr-sign-up:hover,
 header img:hover,
 header a:active
@@ -130,32 +131,72 @@ nav#main-nav
     margin-right: 30px;
 }
 
-<!--FOOTER-->
-
-footer
+footer 
 {
-    text-anchor: 20px;
-    text-align: center;
-    text-decoration: none;
-    align-items: center;
-    background-color: rgb(0, 0, 3);   
-    box-shadow: 1px 1px 8px rgb(255, 255, 255);
-}
-
-.social-media-brayanjsr img
-{
-    width: 35px;
-    height: 35px;
-    background: black;
-    border-radius: 50%;
-    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(12, 12, 12);
     color: white;
-    margin-block-end: 10px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-.social-media-brayanjsr img:hover 
+#copyright-brayanjsr, #social-media 
 {
-    background-color: rgb(255, 255, 255);
-    opacity: 1.0;
-    box-shadow: 1px 1px 8px rgb(255, 255, 255);
+    margin: auto; /* Esto centrará los elementos hijos horizontalmente */
+    max-width: 700px; /* Puedes ajustar el ancho máximo según tus necesidades */
+}
+
+.social-media-brayanjsr 
+{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.social-media-brayanjsr a img 
+{
+    border-radius: 40px;
+    border: 2px solid rgb(255, 255, 255);
+    width: 35px; 
+    height: 35px;
+}
+
+.divider-header, .divider-footer
+{
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px rgb(255, 255, 255);
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    height: 1px;
+    border-radius: 40px;
+    opacity: 0.3;
+}
+
+.main-content-title
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.main-content-cover-picture img
+{
+    width: 30%;
+    height: 40%;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
+}
+
+hr
+{
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px rgb(255, 255, 255);
+    width: 400px;
+    border-radius: 40px;
+    opacity: 0.1;
 }
