@@ -20,7 +20,7 @@ h2{ font-size: 1.1em; color: white}
 h3{ font-size: 1.0em; color: white}
 h4{ font-size: 0.8em; color: white; }
 h5{ font-size: 0.6em; color: white;}
-p{ font-size: 1.6em; color: white; font-weight: bold;}
+p{ font-size: 0.9em; color: white; font-weight: bold;}
 ul{ list-style: none;}
 
 a
@@ -38,12 +38,20 @@ header
     align-items: center;
 }
 
+img 
+{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 header nav
 {
     flex-direction: column;
 }
 
 header a:hover,
+.grid-item:hover,
 .social-media-brayanjsr a img:hover,
 header .logo-brayanjsr-sign-up:hover,
 header img:hover,
@@ -65,9 +73,9 @@ header a:active
 {
     font-size: 0.6em;
     position: absolute; /* Colocar el mensaje justo debajo de la sección superior */
-    height: 50px;
-    width: 132px;
-    margin-top: -20px;
+    height: 90px;
+    width: 200px;
+    top: 50%;
     text-align: center;
     display: none;
 }
@@ -97,26 +105,26 @@ header a:active
 {
     position: relative;
     width: 150px;
-    margin-left: 15px;
-    font-size: 1.4em;
+    margin-left: 20px;
+    font-size: 2.1em;
 }
 
 .logo-brayanjsr-sign-up
 {
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-weight: bold;
     padding: 10px 15px;
     border-radius: 20px;
     border: 2px solid rgb(255, 255, 255);
     box-shadow: 1px 1px 5px rgb(255, 255, 255);
     float: right;
-    margin-right: 15px;
+    margin-right: 20px;
     position: relative;
 }
 
 nav#main-nav a
 {
-    font-size: 0.9em;
+    font-size: 1.6em;
     font-weight: bold;
     padding: 8px 10px;
     border-radius: 20px;
@@ -174,22 +182,60 @@ footer
     opacity: 0.3;
 }
 
-.main-content-title
+.grid-container 
 {
-    text-align: center;
-    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Puedes ajustar el número de columnas según tus necesidades */
+    gap: 15px;
+    
+    padding: 20px;
 }
 
-.main-content-cover-picture img
+.grid-item 
 {
-    width: 30%;
-    height: 40%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: opacity 0.9s ease-in-out;
+}
+
+.overlay .overlay2
+{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
     justify-content: center;
-    margin-left: 15px;
-    margin-right: 10px;
-    border-radius: 50px;
-    box-shadow: 0px 0px 5px rgb(255, 255, 255);
-    border: 3px solid rgb(255, 255, 255);
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay
+{
+    width: 50%;
+    height: 100%;
+    bottom: 0;
+}
+
+.overlay2
+{
+    right: 0;
+}
+
+.overlay p, .overlay2 p
+{
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.grid-item:hover .overlay,
+.grid-item:hover .overlay2
+{
+    opacity: 1;
 }
 
 hr
