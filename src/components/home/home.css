@@ -1,0 +1,144 @@
+*
+{
+    box-sizing: border-box; 
+}
+
+body
+{
+    font-family: 'finland', Courier, monospace;
+    color:white;
+    background-color: black;
+    margin:0;
+}
+
+/* 
+    em: tamanio relativo a la fuente que use.
+*/
+a{ font-size: 1.3em; }
+h1{ font-size: 1.6em; color: white;}
+h2{ font-size: 1.1em; color: white}
+h3{ font-size: 1.0em; color: white}
+h4{ font-size: 0.8em; color: white; }
+h5{ font-size: 0.6em; color: white;}
+p{ font-size: 0.9em; color: white; font-weight: bold;}
+ul{ list-style: none;}
+
+a
+{
+    color: white;
+    text-decoration: none;
+}
+
+header
+{
+    display: flex;
+    background-color: rgb(10, 10, 10);
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img 
+{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+header nav
+{
+    flex-direction: column;
+}
+
+button:hover,
+header a:hover,
+.grid-item:hover,
+.social-media-brayanjsr a img:hover,
+header .logo-brayanjsr-sign-up:hover,
+header .logo-brayanjsr-sign-up a:hover,
+header img:hover,
+header a:active
+{
+    background-color: rgb(255, 255, 250);
+    box-shadow: 1px 1px 8px rgb(255, 255, 255);
+    color:black;
+    transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
+}
+
+.divider-header, .divider-footer
+{
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px rgb(255, 255, 255);
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    height: 1px;
+    border-radius: 40px;
+    opacity: 0.3;
+}
+
+.background-container 
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../../Media/art\ covert\ album.jpeg');
+    background-position: center bottom;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay 
+{
+    background: rgba(10, 10, 10, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
+    transition: background-color 1.5s, box-shadow 0.5s, color 0.5s;
+    opacity: 0;
+}
+
+.overlay h1 
+{
+    font-size: 2em;
+    margin: 0;
+}
+
+.background-container:hover .overlay
+{
+    opacity: 1;
+}
+
+.overlay img
+{
+    color: white;
+    padding: 10px 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1em;
+    padding: 1px 10px;
+    border-radius: 400px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px rgb(255, 255, 255);
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover
+{
+    background-color: white;
+}
+
+hr
+{
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px rgb(255, 255, 255);
+    width: 400px;
+    border-radius: 40px;
+    opacity: 0.1;
+}

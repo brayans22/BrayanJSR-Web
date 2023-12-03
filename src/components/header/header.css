@@ -1,0 +1,142 @@
+*
+{
+    box-sizing: border-box; 
+}
+
+body
+{
+    font-family: 'finland', Courier, monospace;
+    color:white;
+    background-color: black;
+    margin:0;
+}
+
+/* 
+    em: tamanio relativo a la fuente que use.
+*/
+a{ font-size: 1.3em; }
+h1{ font-size: 1.6em; color: white;}
+h2{ font-size: 1.1em; color: white}
+h3{ font-size: 1.0em; color: white}
+h4{ font-size: 0.8em; color: white; }
+h5{ font-size: 0.6em; color: white;}
+p{ font-size: 0.9em; color: white; font-weight: bold;}
+ul{ list-style: none;}
+
+a
+{
+    color: white;
+    text-decoration: none;
+}
+
+header
+{
+    display: flex;
+    background-color: rgb(10, 10, 10);
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img 
+{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+header nav
+{
+    flex-direction: column;
+}
+
+header a:hover,
+header .logo-brayanjsr-sign-up:hover,
+header .logo-brayanjsr-sign-up a:hover,
+header img:hover,
+header a:active
+{
+    background-color: rgb(255, 255, 250);
+    box-shadow: 1px 1px 8px rgb(255, 255, 255);
+    color:black;
+    transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
+}
+
+.logo-brayanjsr
+{
+    display: flex;
+    align-items: center;
+}
+    
+.logo-brayanjsr-hidden-message 
+{
+    font-size: 0.6em;
+    position: absolute;
+    height: 90px;
+    width: 200px;
+    top: 50%;
+    text-align: center;
+    display: none;
+}
+
+.logo-brayanjsr-name:hover
+{
+    align-items: center;
+}
+
+.logo-brayanjsr-name:hover .logo-brayanjsr-hidden-message 
+{
+    display: block;
+}
+
+.logo-brayanjsr img
+{
+    width: 70px;
+    height: 70px;
+    margin-left: 15px;
+    margin-right: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.logo-brayanjsr-name
+{
+    position: relative;
+    width: 150px;
+    margin-left: 20px;
+    font-size: 2.1em;
+}
+
+.logo-brayanjsr-sign-up
+{
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 1px 10px;
+    border-radius: 400px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px rgb(255, 255, 255);
+    float: right;
+    margin-right: 120px;
+    position: relative;
+}
+
+nav#main-nav a
+{
+    font-size: 1.6em;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 13px;
+    border-radius: 20px;
+    display: inline-block;
+    
+}
+
+nav#main-nav
+{
+    margin-left: 10px;
+    margin-right: 1px;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+}

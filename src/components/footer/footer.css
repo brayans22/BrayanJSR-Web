@@ -1,0 +1,63 @@
+*
+{
+    box-sizing: border-box; 
+}
+
+body
+{
+    font-family: 'finland', Courier, monospace;
+    color:white;
+    background-color: black;
+    margin:0;
+}
+
+footer 
+{
+    background-color: rgb(12, 12, 12);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-media-brayanjsr a img:hover
+{
+    background-color: rgb(255, 255, 250);
+    box-shadow: 1px 1px 8px rgb(255, 255, 255);
+    color:black;
+    transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
+}
+
+#copyright-brayanjsr, #social-media 
+{
+    margin: auto; 
+    max-width: 700px;
+}
+
+.social-media-brayanjsr 
+{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.social-media-brayanjsr a img 
+{
+    border-radius: 40px;
+    border: 2px solid rgb(255, 255, 255);
+    width: 35px; 
+    height: 35px;
+}
+
+.divider-header, .divider-footer
+{
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px rgb(255, 255, 255);
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    height: 1px;
+    border-radius: 40px;
+    opacity: 0.3;
+}
