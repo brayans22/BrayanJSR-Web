@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Header } from '../header/Header.jsx'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import {Home} from '../home/Home.jsx'
