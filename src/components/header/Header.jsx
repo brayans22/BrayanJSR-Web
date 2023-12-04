@@ -1,10 +1,5 @@
-import './header.css'
 import { Link } from 'react-router-dom'
-/*
-                <Route path='/store'>
-                    <Store />
-                </Route>
-*/
+import './header.css'
 
 export function Header()
 {
@@ -19,7 +14,10 @@ export function Header()
             </div>   
             <nav id ="main-nav">
                 <Link to='/'> Home </Link>
+                <Link to='/music'> Music </Link>
                 <Link to='/store'> Store </Link>
+                <Link to='/gallery'> Gallery </Link>
+                <Link to='/contact'> Contact </Link>
             </nav>
             <div class = "logo-brayanjsr-sign-up">
                 <a href="https://open.spotify.com" target="_blank" > SIGN UP </a>   
