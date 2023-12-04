@@ -1,7 +1,5 @@
 # React + Vite
 
-# Crear un Proyecto con Npm y Node
-
 ## Paso 1: Instalar Npm y Node.js and verify that both versions are compatible.
 
 1.1) install from here node [nodejs.org](https://nodejs.org/) <br>
@@ -31,3 +29,20 @@ npm create vite@latest
 ```
 before, your execute the command, you have to configure your proyect. In my case
 I'm using react + vite + swc
+
+## Paso 5: Move into your folder project 
+```bash
+cd proyect_folder
+```
+
+## Paso 6: Install dependencies and generate conection to server host
+```bash
+npm install
+npm run dev
+```
+
+## Paso 7: Install router depency (Optional)
+```bash
+npm install react-router-dom
+```
+
