@@ -11,16 +11,22 @@ export function Header()
                     <h2> BrayanJSR </h2>
                     <div class="logo-brayanjsr-hidden-message"><h5>Feelings Through Music</h5></div>
                 </section>
-            </div>   
-                
-            <nav id = "main-nav">
-                <a href="#active"> Home </a>
-                <a href="../Music/music.html"> Music </a>
-                <a href="../Store/store.html"> Store </a>
-                <a href="../Gallery/gallery.html"> Gallery </a>
-                <a href="../About Me/about-me.html"> About Me </a>
-                <a href="../Contact/contact.html"> Contact </a>
-            </nav>
+            </div>
+
+            <Router>
+                <nav id ="main-nav">
+                    <Link to="/"> Home     </Link>
+                    <Link to="/"> Music    </Link>
+                    <Link to="/"> Store    </Link>
+                    <Link to="/"> Gallery  </Link>
+                    <Link to="/"> Contact  </Link>
+                </nav>
+                <Route path="../home/" exact component={Home}/>
+                <Route path="../music/" exact component={Music}/>
+                <Route path="../store/" exact component={Store}/>
+                <Route path="../gallery/" exact component={Gallery}/>
+                <Route path="../contact" exact component={Contact}/>
+            </Router> 
 
             <div class = "logo-brayanjsr-sign-up">
                 <a href="https://open.spotify.com" target="_blank" > SIGN UP </a>   

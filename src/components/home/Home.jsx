@@ -6,8 +6,6 @@ export function Home()
 {
     return (
         <>
-            <Header />
-
             <section id="separator-header">
                 <div class="divider-header"></div>
             </section>
@@ -30,8 +28,6 @@ export function Home()
             <section id="separator-footer">
                 <div class="divider-footer"></div>
             </section>
-
-            <Footer />
         </>
     )
 }
