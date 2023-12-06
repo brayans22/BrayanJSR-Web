@@ -1,0 +1,447 @@
+{
+    "type" :
+    {
+        "album" :
+        {
+            "1" : {
+            "title" : "Yin Yang Revolution",
+            "released" : "18/03/2020",
+            "songs": [
+                {
+                "id": 1,
+                "trackNumber": 1,
+                "title": "Yin Yang Revolution",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "3:14",
+                "genre": "Trap/Lo-fi",
+                "img": "./Media/YYR/YYR_Covert_album.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 2,
+                "trackNumber": 2,
+                "title": "Alone With The Moon",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "2:07",
+                "genre": "Lo-fi/Trap sad",
+                "img": "./Media/YYR/alone_with_the_moon.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 3,
+                "trackNumber": 3,
+                "title": "Iglú",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "2:27",
+                "genre": "Lo-fi",
+                "img": "./Media/YYR/iglu.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 4,
+                "trackNumber": 4,
+                "title": "Peaceful Atmosphere",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "2:06",
+                "genre": "Lo-fi",
+                "img": "./Media/YYR/peaceful.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 5,
+                "trackNumber": 5,
+                "title": "Natural Vibes",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "2:09",
+                "genre": "Lo-fi/Ambient",
+                "img": "./Media/YYR/natural_vibes.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 6,
+                "trackNumber": 6,
+                "title": "Heaven Voices",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "2:09",
+                "genre": "Lo-fi/Ambient",
+                "img": "./Media/YYR/heaven_voices.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 7,
+                "trackNumber": 7,
+                "title": "Tranquility Vibes",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "2:22",
+                "genre": "Lo-fi/Ambient",
+                "img": "./Media/YYR/tranquility_vibes.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+                
+            }
+            ]
+            },
+            "2" : {
+            "title" : "No Limits",
+            "released" : "22/08/2022",
+            "songs": [
+                {
+                "id": 8,
+                "trackNumber": 1,
+                "title": "No Limits",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "1:30",
+                "genre": "Trap/Lo-fi",
+                "img": "./Media/NL/nl.jpeg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 9,
+                "trackNumber": 2,
+                "title": "Sky Bleu",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "1:15",
+                "genre": "Lo-fi/Future Bass",
+                "img": "./Media/NL/Sky_Bleu.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 10,
+                "trackNumber": 3,
+                "title": "Dancin' No Sleep",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "2:01",
+                "genre": "Dance/Electronic/House",
+                "img": "./Media/NL/DNL.jpeg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 11,
+                "trackNumber": 4,
+                "title": "Unknown Footage",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "1:15",
+                "genre": "Dance/Electronic/House",
+                "img": "./Media/NL/Unknown_Footage.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 12,
+                "trackNumber": 5,
+                "title": "Chrominance",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "1:31",
+                "genre": "Lo-fi",
+                "img": "./Media/NL/Chrominance.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 13,
+                "trackNumber": 6,
+                "title": "Floating In Space",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "1:46",
+                "genre": "Lo-fi/Ambient",
+                "img": "./Media/NL/FIS.jpeg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 14,
+                "trackNumber": 7,
+                "title": "Lovely Planet",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "1:18",
+                "genre": "Lo-fi/Ambient",
+                "img": "./Media/NL/LFV.jpeg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 15,
+                "trackNumber": 8,
+                "title": "Rêveur",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "1:45",
+                "genre": "Lo-fi/Ambient",
+                "img": "./Media/NL/LFV.jpeg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 16,
+                "trackNumber": 9,
+                "title": "B&W",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "1:07",
+                "genre": "Lo-fi/Ambient",
+                "img": "./Media/NL/B_W.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            {
+                "id": 17,
+                "trackNumber": 10,
+                "title": "Aimless",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "2:03",
+                "genre": "Lo-fi/Ambient/Sad",
+                "img": "./Media/NL/Aimless.jpeg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            }
+            ]
+            }
+        },
+        "singles" : 
+        {
+            "1" : {
+                "title": "With Youxxx",
+                "id": "18",
+                "trackNumber": "1",
+                "released": "22/02/2022",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "1:50",
+                "genre": "Electronic/House",
+                "img": "./Media/Singles/WY.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            "2" : {
+                "title": "Sky Bleu",
+                "id": "19",
+                "trackNumber": "1",
+                "released": "29/07/2022",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "1:15",
+                "genre": "Lo-fi/Future Bass",
+                "img": "./Media/NL/Sky_Bleu.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            },
+            "3" : {
+                "title": "Thinks I Want To Say",
+                "id": "20",
+                "trackNumber": "1",
+                "released": "20/06/2023",
+                "storesUrl": {
+                    "spotify":  "",
+                    "youtube":  "",
+                    "apple":    "",
+                    "amazon":   "",
+                    "deezer":   ""
+                },
+                "artist": "BrayanJSR",
+                "compositor": "Brayan Joaquin Saiago Rojas",
+                "duration": "1:43",
+                "genre": "Electronic/House/Dance",
+                "img": "./Media/Singles/Thinks.jpg",
+                "copyright": "Brayan Saiago & BrayanJSR ©",
+                "distributor": "Routenote",
+                "history": "-",
+                "specifications": "Extension .mp3 - 320 kbps"
+            }
+        }
+    }
+}
