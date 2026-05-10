@@ -4,14 +4,19 @@ import { useI18n } from "@/i18n/I18nProvider";
 import { useMemo, useState } from "react";
 import { Search, Play } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import cover1 from "@/assets/covers/wwr.jpg";
-import cover2 from "@/assets/covers/nl.jpg";
-import cover3 from "@/assets/covers/yyr.jpg";
-import cover4 from "@/assets/covers/yyr.jpg";
+
+{/* Cover Pictures Assets */}
+import coverWhatWasReal       from "@/assets/covers/Albums/WWR/wwr.jpg";
+import coverNoLimits          from "@/assets/covers/Albums/NL/nl.jpg";
+import coverYinYangRevolution from "@/assets/covers/Albums/YYR/yyr.jpg";
+import coverSkyBleu           from "@/assets/covers/Singles/sky_bleu.jpg";
+import coverWithYouxx         from "@/assets/covers/Singles/WY.jpg";
+import coverThink             from "@/assets/covers/Singles/Think.jpg";
+import coverFallingToPieces   from "@/assets/covers/Singles/FallingToPieces.jpg";
 
 const SPOTIFY_URL = "https://open.spotify.com/intl-es/artist/1DNdeBjys6meGT7oO65CnQ";
 
-type AtmosKey = "atmos-space" | "atmos-ocean" | "atmos-grain" | "atmos-white";
+type AtmosKey = "atmos-space" | "atmos-ocean" | "atmos-grain" | "atmos-think" | "atmos-wy" | "atmos-sky" | "atmos-falling";
 
 type Release = {
   title: string;
@@ -36,7 +41,7 @@ const releases: Release[] = [
     year: 2023,
     type: "Album",
     genre: "Lo-fi / Ambient",
-    cover: cover1,
+    cover: coverWhatWasReal,
     atmos: "atmos-ocean",
     label: "BrayanJSR",
     producer: "BrayanJSR & Brayan Saiago",
@@ -61,9 +66,9 @@ const releases: Release[] = [
     year: 2022,
     type: "Album",
     genre: "Lo-fi / Electronic / Ambient",
-    cover: cover2,
+    cover: coverNoLimits,
     duration: "15:33",
-    atmos: "atmos-white",
+    atmos: "atmos-space",
     label: "BrayanJSR",
     producer: "BrayanJSR & Brayan Saiago",
     artist: "BrayanJSR",
@@ -89,9 +94,9 @@ const releases: Release[] = [
     year: 2020,
     type: "EP",
     genre: "Trap / Lo-fi / Ambient",
-    cover: cover3,
+    cover: coverYinYangRevolution,
     duration: "16:34",
-    atmos: "atmos-space",
+    atmos: "atmos-grain",
     label: "BrayanJSR",
     producer: "BrayanJSR & Brayan Saiago",
     artist: "BrayanJSR",
@@ -114,8 +119,8 @@ const releases: Release[] = [
     year: 2026,
     type: "Single",
     genre: "Dance / Electronic Pop",
-    cover: cover4,
-    atmos: "atmos-grain",
+    cover: coverFallingToPieces,
+    atmos: "atmos-falling",
     label: "BrayanJSR & Brayan Saiago",
     producer: "BrayanJSR & Brayan Saiago",
     artist: "BrayanJSR",
@@ -125,32 +130,54 @@ const releases: Release[] = [
       "Próximo single. Una nueva era electrónica y emocional empieza aquí.",
     tracks: [{ n: 1, title: "Falling To Pieces", duration: "1:27" }],
   },
-];
-
-const singles = [
   {
     title: "Things I Want To Say",
     year: 2023,
+    type: "Single",
     genre: "Electronic / House / Dance",
+    cover: coverThink,
     duration: "1:43",
+    atmos: "atmos-think",
+    label: "BrayanJSR",
+    producer: "BrayanJSR & Brayan Saiago",
+    artist: "BrayanJSR",
     releaseDate: "2023-06-20",
     copyright: "2023 © Brayan Saiago & BrayanJSR",
+    description: "Standalone single released independently.",
+    tracks: [{ n: 1, title: "Things I Want To Say", duration: "1:43" }],
   },
   {
     title: "Sky Bleu",
     year: 2022,
+    type: "Single",
     genre: "Lo-fi / Future Bass",
+    cover: coverSkyBleu,
     duration: "1:15",
+    atmos: "atmos-sky",
+    label: "BrayanJSR",
+    producer: "BrayanJSR & Brayan Saiago",
+    artist: "BrayanJSR",
     releaseDate: "2022-07-29",
     copyright: "2022 © Brayan Saiago & BrayanJSR",
+    description: "Standalone single released independently.",
+    tracks: [{ n: 1, title: "Sky Bleu", duration: "1:15" }],
   },
+
   {
     title: "With Youxxx",
     year: 2022,
+    type: "Single",
     genre: "Electronic / House",
+    cover: coverWithYouxx,
     duration: "1:50",
+    atmos: "atmos-wy",
+    label: "BrayanJSR",
+    producer: "BrayanJSR & Brayan Saiago",
+    artist: "BrayanJSR",
     releaseDate: "2022-02-22",
     copyright: "2022 © Brayan Saiago & BrayanJSR",
+    description: "Standalone single released independently.",
+    tracks: [{ n: 1, title: "With Youxxx", duration: "1:50" }],
   },
 ];
 
@@ -184,65 +211,73 @@ const POPULARITY: Record<string, number> = {
 };
 
 const TOP_TRACKS = [
-  { n: 1, title: "Sky Bleu", album: "No Limits", cover: cover2, duration: "1:15" },
-  { n: 2, title: "Floating In Space", album: "No Limits", cover: cover2, duration: "1:46" },
-  { n: 3, title: "Iglú", album: "Yin Yang Revolution", cover: cover3, duration: "2:27" },
-  { n: 4, title: "Maybe It's Love...", album: "What Was Real?", cover: cover1, duration: "1:11" },
-  { n: 5, title: "Things I Want To Say", album: "Single", cover: cover4, duration: "1:43" },
+  { n: 1, title: "Sky Bleu", album: "No Limits", cover: coverSkyBleu, duration: "1:15" },
+  { n: 2, title: "Floating In Space", album: "No Limits", cover: coverNoLimits, duration: "1:46" },
+  { n: 3, title: "Iglú", album: "Yin Yang Revolution", cover: coverYinYangRevolution, duration: "2:27" },
+  { n: 4, title: "Maybe It's Love...", album: "What Was Real?", cover: coverWhatWasReal, duration: "1:11" },
+  { n: 5, title: "Things I Want To Say", album: "Single", cover: coverWhatWasReal, duration: "1:43" },
 ];
 
 type CombinedRelease = Release;
 
 export function Music() {
   const { t } = useI18n();
+
   const [query, setQuery] = useState("");
   const [type, setType] = useState<(typeof TYPES)[number]>("All");
   const [genre, setGenre] = useState<(typeof GENRES)[number]>("All");
   const [year, setYear] = useState<string>("All");
-  const [sort, setSort] = useState<(typeof SORTS)[number]["value"]>("popular");
+  const [sort, setSort] =
+    useState<(typeof SORTS)[number]["value"]>("popular");
+
   const [atmos, setAtmos] = useState<AtmosKey | null>(null);
 
   const allYears = useMemo(() => {
     const ys = new Set<number>();
+
     releases.forEach((r) => ys.add(r.year));
-    singles.forEach((s) => ys.add(s.year));
-    return ["All", ...Array.from(ys).sort((a, b) => b - a).map(String)];
+
+    return [
+      "All",
+      ...Array.from(ys)
+        .sort((a, b) => b - a)
+        .map(String),
+    ];
   }, []);
 
-  const sortFn = (a: { title: string; year: number }, b: { title: string; year: number }) => {
+  const sortFn = (
+    a: { title: string; year: number },
+    b: { title: string; year: number }
+  ) => {
     switch (sort) {
-      case "year-desc": return b.year - a.year;
-      case "year-asc": return a.year - b.year;
-      case "alpha-asc": return a.title.localeCompare(b.title);
-      case "alpha-desc": return b.title.localeCompare(a.title);
+      case "year-desc":
+        return b.year - a.year;
+
+      case "year-asc":
+        return a.year - b.year;
+
+      case "alpha-asc":
+        return a.title.localeCompare(b.title);
+
+      case "alpha-desc":
+        return b.title.localeCompare(a.title);
+
       case "popular":
       default:
-        return (POPULARITY[b.title] ?? 0) - (POPULARITY[a.title] ?? 0);
+        return (
+          (POPULARITY[b.title] ?? 0) -
+          (POPULARITY[a.title] ?? 0)
+        );
     }
   };
 
-  const filteredReleases = useMemo<CombinedRelease[]>(() => {
+  const filteredReleases = useMemo<Release[]>(() => {
     const q = query.trim().toLowerCase();
-    const combined: CombinedRelease[] = [
+
+    const combined: Release[] = [
       ...releases,
-      ...singles.map<CombinedRelease>((s) => ({
-        title: s.title,
-        year: s.year,
-        type: "Single",
-        genre: s.genre,
-        cover: cover4,
-        duration: s.duration,
-        atmos: "atmos-grain",
-        releaseDate: s.releaseDate,
-        upc: s.upc,
-        copyright: s.copyright,
-        artist: "BrayanJSR",
-        producer: "BrayanJSR & Brayan Saiago",
-        label: "BrayanJSR",
-        description: "Standalone single released independently.",
-        tracks: [{ n: 1, title: s.title, duration: s.duration }],
-      })),
     ];
+
     return combined
       .filter((r) => {
         if (type !== "All" && r.type !== type) return false;
@@ -251,7 +286,12 @@ export function Music() {
         if (!q) return true;
         if (r.title.toLowerCase().includes(q)) return true;
         if (String(r.year).includes(q)) return true;
-        return r.tracks?.some((tr) => tr.title.toLowerCase().includes(q)) ?? false;
+
+        return (
+          r.tracks?.some((tr) =>
+            tr.title.toLowerCase().includes(q)
+          ) ?? false
+        );
       })
       .slice()
       .sort(sortFn);
@@ -264,7 +304,7 @@ export function Music() {
       title={t.music.title}
       subtitle={t.music.subtitle}
     >
-      {/* Hover atmosphere — fills entire viewport behind page when hovering a release */}
+      {/* Hover atmosphere */}
       <AnimatePresence mode="wait">
         {atmos && (
           <motion.div
@@ -272,7 +312,10 @@ export function Music() {
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 0.55, scale: 1 }}
             exit={{ opacity: 0, scale: 1.02 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 1.2,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className={`pointer-events-none fixed inset-0 z-0 ${atmos}`}
           />
         )}
@@ -284,10 +327,12 @@ export function Music() {
           <h3 className="font-music text-4xl text-foreground sm:text-5xl">
             {t.music.topTracks}
           </h3>
+
           <span className="text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
             Most played
           </span>
         </div>
+
         <ul className="divide-y divide-white/5 rounded-2xl glass">
           {TOP_TRACKS.map((tr, i) => (
             <motion.li
@@ -295,15 +340,24 @@ export function Music() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.06 }}
+              transition={{
+                duration: 0.5,
+                delay: i * 0.06,
+              }}
               className="group flex items-center justify-between gap-4 px-4 py-3 transition-colors hover:bg-white/5"
             >
               <div className="flex items-center gap-4">
                 <span className="w-5 text-right font-mono text-xs text-muted-foreground/60">
                   {String(tr.n).padStart(2, "0")}
                 </span>
+
                 <div className="relative h-12 w-12 overflow-hidden rounded-md">
-                  <img src={tr.cover} alt="" className="h-full w-full object-cover" />
+                  <img
+                    src={tr.cover}
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
+
                   <a
                     href={SPOTIFY_URL}
                     target="_blank"
@@ -311,16 +365,24 @@ export function Music() {
                     className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity group-hover:opacity-100"
                     aria-label={`Play ${tr.title}`}
                   >
-                    <Play className="h-4 w-4 text-white" fill="currentColor" />
+                    <Play
+                      className="h-4 w-4 text-white"
+                      fill="currentColor"
+                    />
                   </a>
                 </div>
+
                 <div>
-                  <p className="text-sm font-medium text-foreground">{tr.title}</p>
+                  <p className="text-sm font-medium text-foreground">
+                    {tr.title}
+                  </p>
+
                   <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
                     {tr.album}
                   </p>
                 </div>
               </div>
+
               <span className="font-mono text-xs text-muted-foreground/70">
                 {tr.duration ?? "—"}
               </span>
@@ -329,11 +391,12 @@ export function Music() {
         </ul>
       </Reveal>
 
-      {/* FILTERS — dropdowns */}
+      {/* FILTERS */}
       <Reveal className="mb-10 relative">
         <div className="grid gap-3 rounded-2xl glass p-4 md:grid-cols-[1fr_auto_auto_auto_auto] md:items-center">
           <label className="relative flex items-center">
             <Search className="pointer-events-none absolute left-3 h-4 w-4 text-muted-foreground" />
+
             <input
               type="search"
               value={query}
@@ -342,10 +405,30 @@ export function Music() {
               className="w-full rounded-full border border-white/10 bg-black/40 py-2.5 pl-9 pr-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-white/30 focus:outline-none"
             />
           </label>
+
           {[
-            { label: t.music.type, value: type, set: (v: string) => setType(v as typeof type), opts: TYPES as readonly string[] },
-            { label: t.music.genre, value: genre, set: (v: string) => setGenre(v as typeof genre), opts: GENRES as readonly string[] },
-            { label: "Year", value: year, set: setYear, opts: allYears },
+            {
+              label: t.music.type,
+              value: type,
+              set: (v: string) =>
+                setType(v as typeof type),
+              opts: TYPES as readonly string[],
+            },
+
+            {
+              label: t.music.genre,
+              value: genre,
+              set: (v: string) =>
+                setGenre(v as typeof genre),
+              opts: GENRES as readonly string[],
+            },
+
+            {
+              label: "Year",
+              value: year,
+              set: setYear,
+              opts: allYears,
+            },
           ].map((f) => (
             <select
               key={f.label}
@@ -355,20 +438,31 @@ export function Music() {
               aria-label={f.label}
             >
               {f.opts.map((o) => (
-                <option key={o} value={o} className="bg-black text-foreground">
+                <option
+                  key={o}
+                  value={o}
+                  className="bg-black text-foreground"
+                >
                   {f.label}: {o}
                 </option>
               ))}
             </select>
           ))}
+
           <select
             value={sort}
-            onChange={(e) => setSort(e.target.value as typeof sort)}
+            onChange={(e) =>
+              setSort(e.target.value as typeof sort)
+            }
             className="rounded-full border border-white/10 bg-black/40 px-4 py-2.5 text-xs uppercase tracking-[0.2em] text-foreground focus:border-white/30 focus:outline-none"
             aria-label="Sort"
           >
             {SORTS.map((s) => (
-              <option key={s.value} value={s.value} className="bg-black text-foreground">
+              <option
+                key={s.value}
+                value={s.value}
+                className="bg-black text-foreground"
+              >
                 Sort: {s.label}
               </option>
             ))}
@@ -376,21 +470,31 @@ export function Music() {
         </div>
       </Reveal>
 
-      {/* RELEASES — full editorial cards */}
+      {/* RELEASES */}
       <div className="space-y-10 relative">
         {filteredReleases.map((release, i) => (
-          <Reveal key={release.title + release.year} delay={i * 0.05}>
+          <Reveal
+            key={release.title + release.year}
+            delay={i * 0.05}
+          >
             <motion.a
               href={SPOTIFY_URL}
               target="_blank"
               rel="noreferrer"
-              onMouseEnter={() => release.atmos && setAtmos(release.atmos)}
+              onMouseEnter={() =>
+                release.atmos && setAtmos(release.atmos)
+              }
               onMouseLeave={() => setAtmos(null)}
               whileHover={{ y: -4 }}
-              transition={{ type: "spring", damping: 18, stiffness: 200 }}
+              transition={{
+                type: "spring",
+                damping: 18,
+                stiffness: 200,
+              }}
               className="group relative block overflow-hidden rounded-3xl glass transition-all duration-500 hover:border-white/20 hover:bg-white/[0.03] hover:shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)]"
             >
               <div className="grid gap-6 p-6 md:grid-cols-[320px_1fr] md:gap-8 md:p-8">
+
                 {/* COVER */}
                 <div className="relative aspect-square overflow-hidden rounded-2xl">
                   <motion.img
@@ -399,12 +503,21 @@ export function Music() {
                     loading="lazy"
                     className="h-full w-full object-cover"
                     whileHover={{ scale: 1.06 }}
-                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{
+                      duration: 0.8,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
                   />
+
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80" />
+
                   <div className="absolute bottom-3 right-3 flex h-12 w-12 items-center justify-center rounded-full bg-white text-black opacity-0 shadow-[0_0_30px_rgba(255,255,255,0.4)] transition-all duration-500 translate-y-2 group-hover:translate-y-0 group-hover:opacity-100">
-                    <Play className="h-5 w-5" fill="currentColor" />
+                    <Play
+                      className="h-5 w-5"
+                      fill="currentColor"
+                    />
                   </div>
+
                   <div className="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-black/60 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.3em] text-white/80 backdrop-blur">
                     <span className="h-1.5 w-1.5 rounded-full bg-white" />
                     {release.type} · {release.year}
@@ -416,9 +529,11 @@ export function Music() {
                   <p className="text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
                     {release.type} · {release.year}
                   </p>
+
                   <h3 className="font-music text-4xl text-foreground sm:text-5xl">
                     {release.title}
                   </h3>
+
                   {release.description && (
                     <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
                       {release.description}
@@ -427,36 +542,99 @@ export function Music() {
 
                   <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-1 text-[11px] uppercase tracking-[0.2em] text-muted-foreground/80 sm:grid-cols-3">
                     <dt className="opacity-60">Genre</dt>
-                    <dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">{release.genre}</dd>
-                    {release.duration && (<><dt className="opacity-60">Duration</dt><dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">{release.duration}</dd></>)}
-                    {release.label && (<><dt className="opacity-60">Label</dt><dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">{release.label}</dd></>)}
-                    {release.producer && (<><dt className="opacity-60">Producer</dt><dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">{release.producer}</dd></>)}
-                    {release.releaseDate && (<><dt className="opacity-60">Release</dt><dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">{release.releaseDate}</dd></>)}
-                    {release.copyright && (<><dt className="opacity-60">©</dt><dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">{release.copyright}</dd></>)}
+                    <dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">
+                      {release.genre}
+                    </dd>
+
+                    {release.duration && (
+                      <>
+                        <dt className="opacity-60">
+                          Duration
+                        </dt>
+
+                        <dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">
+                          {release.duration}
+                        </dd>
+                      </>
+                    )}
+
+                    {release.label && (
+                      <>
+                        <dt className="opacity-60">
+                          Label
+                        </dt>
+
+                        <dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">
+                          {release.label}
+                        </dd>
+                      </>
+                    )}
+
+                    {release.producer && (
+                      <>
+                        <dt className="opacity-60">
+                          Producer
+                        </dt>
+
+                        <dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">
+                          {release.producer}
+                        </dd>
+                      </>
+                    )}
+
+                    {release.releaseDate && (
+                      <>
+                        <dt className="opacity-60">
+                          Release
+                        </dt>
+
+                        <dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">
+                          {release.releaseDate}
+                        </dd>
+                      </>
+                    )}
+
+                    {release.copyright && (
+                      <>
+                        <dt className="opacity-60">©</dt>
+
+                        <dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">
+                          {release.copyright}
+                        </dd>
+                      </>
+                    )}
                   </dl>
 
-                  {release.tracks && release.tracks.length > 0 && (
-                    <ol className="mt-5 divide-y divide-white/5 text-sm">
-                      {release.tracks.map((tr) => (
-                        <li
-                          key={tr.n}
-                          className="flex items-center justify-between py-2.5 text-muted-foreground transition-colors hover:text-foreground"
-                        >
-                          <span className="flex items-center gap-4">
-                            <span className="w-6 text-right font-mono text-xs text-muted-foreground/60">
-                              {String(tr.n).padStart(2, "0")}
+                  {release.tracks &&
+                    release.tracks.length > 0 && (
+                      <ol className="mt-5 divide-y divide-white/5 text-sm">
+                        {release.tracks.map((tr) => (
+                          <li
+                            key={tr.n}
+                            className="flex items-center justify-between py-2.5 text-muted-foreground transition-colors hover:text-foreground"
+                          >
+                            <span className="flex items-center gap-4">
+                              <span className="w-6 text-right font-mono text-xs text-muted-foreground/60">
+                                {String(tr.n).padStart(
+                                  2,
+                                  "0"
+                                )}
+                              </span>
+
+                              <span className="font-medium">
+                                {tr.title}
+                              </span>
                             </span>
-                            <span className="font-medium">{tr.title}</span>
-                          </span>
-                          {tr.duration && (
-                            <span className="font-mono text-xs text-muted-foreground/60">
-                              {tr.duration}
-                            </span>
-                          )}
-                        </li>
-                      ))}
-                    </ol>
-                  )}
+
+                            {tr.duration && (
+                              <span className="font-mono text-xs text-muted-foreground/60">
+                                {tr.duration}
+                              </span>
+                            )}
+                          </li>
+                        ))}
+                      </ol>
+                    )}
                 </div>
               </div>
             </motion.a>
@@ -471,7 +649,10 @@ export function Music() {
       </div>
 
       {/* SPOTIFY BUTTON */}
-      <Reveal delay={0.1} className="mt-14 flex justify-center relative">
+      <Reveal
+        delay={0.1}
+        className="mt-14 flex justify-center relative"
+      >
         <a
           href={SPOTIFY_URL}
           target="_blank"
