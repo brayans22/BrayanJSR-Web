@@ -47,8 +47,8 @@
 :root {
   --radius: 0.875rem;
 
-  /* Pure monochrome — Catfish & The Bottlemen style */
-  --background: oklch(0 0 0);
+  /* Pure monochrome */
+  --background: oklch(1% 0.1 1);
   --foreground: oklch(0.98 0 0);
 
   --card: oklch(0.06 0 0);
@@ -167,32 +167,81 @@
   }
 
   /* Atmosphere: per-album textures */
-  .atmos-space {
-    background:
-      radial-gradient(ellipse at 30% 20%, oklch(0.18 0.04 260 / 0.5), transparent 60%),
-      radial-gradient(ellipse at 70% 80%, oklch(0.14 0.06 280 / 0.4), transparent 60%),
-      url("./assets/textures/space.jpg") center/cover no-repeat,
-      #000;
-    background-blend-mode: screen, screen, normal, normal;
-  }
-  .atmos-ocean {
-    background:
-      radial-gradient(ellipse at 50% 100%, oklch(0.32 0.08 230 / 0.45), transparent 60%),
-      url("./assets/textures/ocean.jpg") center/cover no-repeat;
-    filter: brightness(0.55) saturate(1.05);
-  }
-  .atmos-grain {
-    background:
-      radial-gradient(ellipse at center, oklch(0.14 0 0 / 0.3), transparent 70%),
-      url("./assets/textures/grain.jpg") center/cover no-repeat,
-      #000;
-  }
-  .atmos-white {
-    background:
-      radial-gradient(ellipse at 50% 0%, oklch(1 0 0 / 0.18), transparent 60%),
-      radial-gradient(ellipse at 50% 100%, oklch(0.95 0.01 240 / 0.12), transparent 60%),
-      #f7f7f5;
-  }
+
+.atmos-space {
+  background:
+    radial-gradient(
+      ellipse at 30% 20%,
+      oklch(0.18 0.04 260 / 0.5),
+      transparent 60%
+    ),
+    url("./assets/textures/space.jpg") center/cover no-repeat,
+    #000;
+
+  background-blend-mode: screen, screen, normal, normal;
+}
+
+.atmos-ocean {
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      oklch(0.32 0.08 230 / 0.45),
+      transparent 60%
+    ),
+    url("./assets/textures/ocean.png") center/cover no-repeat;
+}
+
+.atmos-grain {
+  background:
+    radial-gradient(
+      ellipse at center,
+      oklch(0.14 0 0 / 0.3),
+      transparent 70%
+    ),
+    url("./assets/textures/grain.png") center/cover no-repeat,
+    #000;
+}
+
+.atmos-think {
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      oklch(0.32 0.08 230 / 0.45),
+      transparent 60%
+    ),
+    url("./assets/textures/think.jpg") center/cover no-repeat;
+}
+
+.atmos-wy {
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      oklch(0.32 0.08 230 / 0.45),
+      transparent 60%
+    ),
+    url("./assets/textures/WY.jpg") center/cover no-repeat;
+}
+
+
+.atmos-falling {
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      oklch(0.32 0.08 230 / 0.45),
+      transparent 60%
+    ),
+    url("./assets/textures/FallingToPieces.jpg") center/cover no-repeat;
+}
+
+.atmos-sky {
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      oklch(0.32 0.08 230 / 0.45),
+      transparent 60%
+    ),
+    url("./assets/textures/sky_bleu.jpg") center/cover no-repeat;
+}
 
   /* Per-section ambient backgrounds — subtle, distinct */
   .sec-bg { position: relative; }
