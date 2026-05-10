@@ -1,6 +1,8 @@
 # BrayanJSR Web
 
-This project is a personal website created by **BrayanJSR**, my artistic name as a music artist. Through this website, I showcase my music, creative projects, songs, and personal identity in a modern and interactive web experience built with React and Vite.
+This project is the first version (**V1**) of my personal artist website, currently under development and not yet hosted online. I am **Brayan Saiago**, a programmer and music artist who releases music on Spotify under the name **BrayanJSR**. 
+
+The purpose of this project is to create my own artist platform where I can showcase my music, identity, and creative work through a modern web experience built with React and Vite. At the moment, I am mainly focused on designing and developing the website before deploying it publicly.
 
 ## Technologies Used
 
