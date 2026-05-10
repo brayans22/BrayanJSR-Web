@@ -9,8 +9,7 @@ import cover2 from "@/assets/covers/nl.jpg";
 import cover3 from "@/assets/covers/yyr.jpg";
 import cover4 from "@/assets/covers/yyr.jpg";
 
-const SPOTIFY_URL =
-  "https://open.spotify.com/intl-es/artist/1DNdeBjys6meGT7oO65CnQ";
+const SPOTIFY_URL = "https://open.spotify.com/intl-es/artist/1DNdeBjys6meGT7oO65CnQ";
 
 type AtmosKey = "atmos-space" | "atmos-ocean" | "atmos-grain" | "atmos-white";
 
@@ -27,7 +26,6 @@ type Release = {
   producer?: string;
   artist?: string;
   releaseDate?: string;
-  upc?: string;
   copyright?: string;
   tracks?: { n: number; title: string; duration?: string }[];
 };
@@ -44,7 +42,6 @@ const releases: Release[] = [
     producer: "BrayanJSR & Brayan Saiago",
     artist: "BrayanJSR",
     releaseDate: "2023-12-29",
-    upc: "5063440261245",
     copyright: "2023 © Brayan Saiago & BrayanJSR",
     description:
       "Atmósfera oceánica e introspectiva. Ocho piezas hechas para perderse de noche.",
@@ -71,7 +68,6 @@ const releases: Release[] = [
     producer: "BrayanJSR & Brayan Saiago",
     artist: "BrayanJSR",
     releaseDate: "2022-08-22",
-    upc: "5063113789212",
     copyright: "2022 © Brayan Saiago & BrayanJSR",
     description:
       "Un viaje espacial, futurista e infinito. Mezcla de Lo-fi, Future Bass y House experimental.",
@@ -100,7 +96,6 @@ const releases: Release[] = [
     producer: "BrayanJSR & Brayan Saiago",
     artist: "BrayanJSR",
     releaseDate: "2020-03-18",
-    upc: "5059505100864",
     copyright: "2020 © Brayan Saiago & BrayanJSR",
     description:
       "Sonido nostálgico y cinematográfico con elementos Lo-fi, Ambient y Trap.",
@@ -125,7 +120,6 @@ const releases: Release[] = [
     producer: "BrayanJSR & Brayan Saiago",
     artist: "BrayanJSR",
     releaseDate: "2026-01-30",
-    upc: "5063859753386",
     copyright: "2026 © BrayanJSR",
     description:
       "Próximo single. Una nueva era electrónica y emocional empieza aquí.",
@@ -140,7 +134,6 @@ const singles = [
     genre: "Electronic / House / Dance",
     duration: "1:43",
     releaseDate: "2023-06-20",
-    upc: "5063341506193",
     copyright: "2023 © Brayan Saiago & BrayanJSR",
   },
   {
@@ -149,7 +142,6 @@ const singles = [
     genre: "Lo-fi / Future Bass",
     duration: "1:15",
     releaseDate: "2022-07-29",
-    upc: "5063112965365",
     copyright: "2022 © Brayan Saiago & BrayanJSR",
   },
   {
@@ -158,7 +150,6 @@ const singles = [
     genre: "Electronic / House",
     duration: "1:50",
     releaseDate: "2022-02-22",
-    upc: "",
     copyright: "2022 © Brayan Saiago & BrayanJSR",
   },
 ];
@@ -441,7 +432,6 @@ export function Music() {
                     {release.label && (<><dt className="opacity-60">Label</dt><dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">{release.label}</dd></>)}
                     {release.producer && (<><dt className="opacity-60">Producer</dt><dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">{release.producer}</dd></>)}
                     {release.releaseDate && (<><dt className="opacity-60">Release</dt><dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">{release.releaseDate}</dd></>)}
-                    {release.upc && (<><dt className="opacity-60">UPC</dt><dd className="col-span-1 sm:col-span-2 font-mono normal-case tracking-normal">{release.upc}</dd></>)}
                     {release.copyright && (<><dt className="opacity-60">©</dt><dd className="col-span-1 sm:col-span-2 normal-case tracking-normal">{release.copyright}</dd></>)}
                   </dl>
 
