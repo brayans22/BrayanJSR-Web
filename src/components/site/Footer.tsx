@@ -1,4 +1,5 @@
 import { useI18n } from "@/i18n/I18nProvider";
+import logo from "@/assets/logo-brayanjsr.png";
 
 const SOCIAL_LINKS = [
   { name: "Spotify", href: "https://open.spotify.com/artist/1DNdeBjys6meGT7oO65CnQ" },
@@ -17,9 +18,16 @@ export function Footer() {
     <footer className="relative overflow-hidden border-t border-white/5 py-14">
       <div className="aurora-blob -top-32 left-1/2 h-64 w-[40rem] -translate-x-1/2 bg-primary/20" />
       <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 text-center">
-        <div className="font-display text-2xl font-semibold tracking-tight">
-          BRAYAN<span className="text-primary glow-text">JSR</span>
-        </div>
+        <a href="#home" aria-label="BrayanJSR home" className="group inline-flex flex-col items-center gap-3">
+          <img
+            src={logo}
+            alt="BrayanJSR logo"
+            className="h-16 w-16 object-contain invert transition-transform duration-500 group-hover:scale-110"
+          />
+          <span className="font-display text-xl font-semibold tracking-[0.3em]">
+            BRAYAN<span className="text-primary glow-text">JSR</span>
+          </span>
+        </a>
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs uppercase tracking-[0.25em] text-muted-foreground">
           {SOCIAL_LINKS.map((s) => (
             <a

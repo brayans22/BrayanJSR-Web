@@ -210,14 +210,6 @@ const POPULARITY: Record<string, number> = {
   "With Youxxx": 55,
 };
 
-const TOP_TRACKS = [
-  { n: 1, title: "Sky Bleu", album: "No Limits", cover: coverSkyBleu, duration: "1:15" },
-  { n: 2, title: "Floating In Space", album: "No Limits", cover: coverNoLimits, duration: "1:46" },
-  { n: 3, title: "Iglú", album: "Yin Yang Revolution", cover: coverYinYangRevolution, duration: "2:27" },
-  { n: 4, title: "Maybe It's Love...", album: "What Was Real?", cover: coverWhatWasReal, duration: "1:11" },
-  { n: 5, title: "Things I Want To Say", album: "Single", cover: coverWhatWasReal, duration: "1:43" },
-];
-
 type CombinedRelease = Release;
 
 export function Music() {
@@ -320,76 +312,6 @@ export function Music() {
           />
         )}
       </AnimatePresence>
-
-      {/* TOP TRACKS */}
-      <Reveal className="mb-16 relative">
-        <div className="mb-6 flex items-end justify-between">
-          <h3 className="font-music text-4xl text-foreground sm:text-5xl">
-            {t.music.topTracks}
-          </h3>
-
-          <span className="text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
-            Most played
-          </span>
-        </div>
-
-        <ul className="divide-y divide-white/5 rounded-2xl glass">
-          {TOP_TRACKS.map((tr, i) => (
-            <motion.li
-              key={tr.title}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{
-                duration: 0.5,
-                delay: i * 0.06,
-              }}
-              className="group flex items-center justify-between gap-4 px-4 py-3 transition-colors hover:bg-white/5"
-            >
-              <div className="flex items-center gap-4">
-                <span className="w-5 text-right font-mono text-xs text-muted-foreground/60">
-                  {String(tr.n).padStart(2, "0")}
-                </span>
-
-                <div className="relative h-12 w-12 overflow-hidden rounded-md">
-                  <img
-                    src={tr.cover}
-                    alt=""
-                    className="h-full w-full object-cover"
-                  />
-
-                  <a
-                    href={SPOTIFY_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity group-hover:opacity-100"
-                    aria-label={`Play ${tr.title}`}
-                  >
-                    <Play
-                      className="h-4 w-4 text-white"
-                      fill="currentColor"
-                    />
-                  </a>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium text-foreground">
-                    {tr.title}
-                  </p>
-
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                    {tr.album}
-                  </p>
-                </div>
-              </div>
-
-              <span className="font-mono text-xs text-muted-foreground/70">
-                {tr.duration ?? "—"}
-              </span>
-            </motion.li>
-          ))}
-        </ul>
-      </Reveal>
 
       {/* FILTERS */}
       <Reveal className="mb-10 relative">
