@@ -11,6 +11,83 @@
   --font-editorial: "Italiana", "Tenor Sans", serif;
   --font-music: "Fraunces", "Cormorant Garamond", "Italiana", serif;
 
+  /* SHINE SWEEP */
+
+.shine-sweep::before {
+  content: "";
+  position: absolute;
+  inset: -200%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255,255,255,0.08) 50%,
+    transparent 60%
+  );
+
+  transform: translateX(-100%) rotate(12deg);
+  transition: transform 1.2s ease;
+  pointer-events: none;
+}
+
+.shine-sweep:hover::before {
+  transform: translateX(100%) rotate(12deg);
+}
+
+/* EQ BARS */
+
+.eq-bar {
+  width: 4px;
+  border-radius: 999px;
+  background: white;
+  animation: eqBounce 1s ease-in-out infinite;
+}
+
+.eq-bar:nth-child(1) {
+  height: 10px;
+  animation-delay: 0s;
+}
+
+.eq-bar:nth-child(2) {
+  height: 18px;
+  animation-delay: 0.15s;
+}
+
+.eq-bar:nth-child(3) {
+  height: 26px;
+  animation-delay: 0.3s;
+}
+
+.eq-bar:nth-child(4) {
+  height: 34px;
+  animation-delay: 0.45s;
+}
+
+.eq-bar:nth-child(5) {
+  height: 22px;
+  animation-delay: 0.6s;
+}
+
+.eq-bar:nth-child(6) {
+  height: 14px;
+  animation-delay: 0.75s;
+}
+
+.eq-bar:nth-child(7) {
+  height: 28px;
+  animation-delay: 0.9s;
+}
+
+@keyframes eqBounce {
+  0%, 100% {
+    transform: scaleY(0.6);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scaleY(1.4);
+    opacity: 1;
+  }
+}
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -125,6 +202,35 @@
 }
 
 @layer utilities {
+
+  .eq-bar {
+  width: 3px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  transform-origin: bottom;
+  animation: eq-bounce 1.2s ease-in-out infinite;
+  }
+
+  .eq-bar:nth-child(1) { animation-delay: 0s; }
+  .eq-bar:nth-child(2) { animation-delay: 0.1s; }
+  .eq-bar:nth-child(3) { animation-delay: 0.2s; }
+  .eq-bar:nth-child(4) { animation-delay: 0.3s; }
+  .eq-bar:nth-child(5) { animation-delay: 0.2s; }
+  .eq-bar:nth-child(6) { animation-delay: 0.1s; }
+  .eq-bar:nth-child(7) { animation-delay: 0s; }
+
+  @keyframes eq-bounce {
+    0%, 100% {
+      transform: scaleY(0.2);
+      opacity: 0.4;
+    }
+    50% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
   .font-display { font-family: var(--font-display); letter-spacing: -0.02em; }
   .font-hero { font-family: var(--font-hero); letter-spacing: -0.04em; font-weight: 700; }
   .font-editorial { font-family: var(--font-editorial); letter-spacing: 0.02em; }
