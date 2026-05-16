@@ -181,7 +181,7 @@ const releases: Release[] = [
   },
 
   {
-    previewSong: previewSBL,
+    previewSong: previewWY,
     title: "With Youxxx",
     year: 2022,
     type: "Single",
