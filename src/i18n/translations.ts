@@ -45,6 +45,10 @@ export const translations = {
       genre: "Genre",
       noResults: "No results match your filters.",
       topTracks: "Top Tracks",
+      hoverHint: "Hover any track to preview · Click for details",
+      details: "Track details",
+      listenOn: "Listen on",
+      close: "Close",
     },
     upcoming: {
       eyebrow: "What's next",
@@ -127,6 +131,10 @@ export const translations = {
       genre: "Género",
       noResults: "No hay resultados para tus filtros.",
       topTracks: "Top Tracks",
+      hoverHint: "Pasa el ratón para escuchar · Click para más detalles",
+      details: "Detalles del tema",
+      listenOn: "Escuchar en",
+      close: "Cerrar",
     },
     upcoming: {
       eyebrow: "Lo que viene",
