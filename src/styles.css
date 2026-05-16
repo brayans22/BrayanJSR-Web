@@ -549,38 +549,6 @@
     animation: drift 18s ease-in-out infinite;
   }
 
-  .vinyl-disc {
-    background:
-      radial-gradient(
-        circle at center,
-        #1a1a1a 0%,
-        #0a0a0a 30%,
-        #050505 60%,
-        #0a0a0a 100%
-      ),
-      repeating-radial-gradient(
-        circle at center,
-        transparent 0 1px,
-        rgba(255, 255, 255, 0.04) 1px 2px
-      );
-
-    background-blend-mode: overlay, normal;
-  }
-
-  .vinyl-hole {
-    background: radial-gradient(
-      circle at center,
-      #fff 0%,
-      #fff 35%,
-      #888 60%,
-      #222 100%
-    );
-  }
-
-  .group:hover .vinyl-spin-on-hover {
-    animation: vinyl-spin 6s linear infinite;
-  }
-
   /* Film grain */
 
   .film-grain::before {

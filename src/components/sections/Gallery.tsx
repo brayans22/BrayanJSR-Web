@@ -2,194 +2,52 @@ import { Section } from "@/components/site/Section";
 import { useI18n } from "@/i18n/I18nProvider";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Play, X, Volume2, VolumeX, ArrowUpRight } from "lucide-react";
 
-{/* Gallery No Limits Album */}
-import g1 from "@/assets/covers/Albums/NL/Aimless.jpeg";
-import g2 from "@/assets/covers/Albums/NL/B_W.jpg";
-import g3 from "@/assets/covers/Albums/NL/Chrominance.jpg";
-import g4 from "@/assets/covers/Albums/NL/Chrominance Slowed.jpeg";
-//import g5 from "@/assets/covers/Albums/NL/Dancin.jpeg";
-//import g6 from "@/assets/covers/Albums/NL/FIS.jpeg";
-//import g7 from "@/assets/covers/Albums/NL/LVF.jpeg";
-import g8 from "@/assets/covers/Albums/NL/nl.jpeg";
-import g9 from "@/assets/covers/Albums/NL/Sky_Bleu.jpg";
-import g10 from "@/assets/covers/Albums/NL/Unknown_Footage.jpg";
+import g1 from "@/assets/covers/Albums/NL/no-limits-cover.jpg";
+import g2 from "@/assets/covers/Albums/NL/Aimless.jpeg";
+import g3 from "@/assets/covers/Albums/NL/B_W.jpg";
+import g4 from "@/assets/covers/Albums/YYR/yyr.jpg";
+import g5 from "@/assets/covers/Albums/YYR/alone_with_the_moon.jpg";
+import g6 from "@/assets/covers/Albums/YYR/heaven_voices.jpg";
+import g7 from "@/assets/covers/Albums/WWR/wwr.jpg";
+import g8 from "@/assets/covers/Singles/FallingToPieces.jpg";
+import g9 from "@/assets/covers/Singles/Think.jpg";
+import g10 from "@/assets/covers/Singles/WY.jpg";
+import g11 from "@/assets/covers/Singles/sky_bleu.jpg";
+import g12 from "@/assets/about-me-section.jpg";
+import g13 from "@/assets/hero-artist.jpg";
 
-{/* Gallery Yin Yang Revolution Album */}
-import g11 from "@/assets/covers/Albums/YYR/alone_with_the_moon.jpg";
-import g12 from "@/assets/covers/Albums/YYR/heaven_voices.jpg";
-import g13 from "@/assets/covers/Albums/YYR/iglu.jpg";
-import g14 from "@/assets/covers/Albums/YYR/peaceful.jpg";
-import g15 from "@/assets/covers/Albums/YYR/natural_vibes.jpg";
-import g16 from "@/assets/covers/Albums/YYR/tranquility_vibes.jpg";
-import g17 from "@/assets/covers/Albums/YYR/yyr.jpg";
+type Tile = {
+  src: string;
+  video?: string;
+  title: string;
+  album: string;
+  date: string;
+  note: string;
+  featured?: boolean; // larger tile in bento
+  wide?: boolean;     // 2-col span
+  tall?: boolean;     // 2-row span
+};
 
-
-{/* Gallery What Was Real Album */}
-import g18 from "@/assets/covers/Albums/WWR/wwr.jpg";
-
-
-
-{/* Gallery Singles */}
-import g25 from "@/assets/covers/Singles/FallingToPieces.jpg";
-
-const frames = [
-  {
-    src: g1,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g2,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g3,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  /*
-  {
-    src: g5,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g6,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g7,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g8,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },*/
-  {
-    src: g9,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g10,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g11,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g12,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g13,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g14,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g15,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g16,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g17,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g18,
-    title: "",
-    place: "Unknown",
-    date: "202",
-    album: "",
-    note: "",
-  },
-  {
-    src: g25,
-    title: "Falling to pieces",
-    place: "Unknown",
-    date: "2026",
-    album: "Picture from Falling to Pieces Single ",
-    note: "That feeling when you deep in sad",
-  },
+const tiles: Tile[] = [
+  { src: g4,  title: "Yin Yang Revolution",   album: "EP",         date: "2020", note: "Lo-fi, Ambient y Trap.",                          featured: true },
+  { src: g8,  title: "Falling to Pieces",      album: "Single",     date: "2026", note: "Una nueva era electrónica empieza aquí.",         tall: true },
+  { src: g11, title: "Sky Bleu",               album: "Single",     date: "2022", note: "Lo-fi / Future Bass." },
+  { src: g5,  title: "Alone With The Moon",    album: "YYR",        date: "2020", note: "Una pieza solitaria, escrita bajo la luna." },
+  { src: g6,  title: "Heaven Voices",          album: "YYR",        date: "2020", note: "Voces etéreas suspendidas en el aire." },
+  { src: g2,  title: "Aimless",                album: "No Limits",  date: "2022", note: "Sin rumbo, dejándose llevar.",                   wide: true },
+  { src: g3,  title: "B & W",                  album: "No Limits",  date: "2022", note: "Contraste puro." },
+  { src: g10, title: "With Youxxx",            album: "Single",     date: "2022", note: "House emocional." },
+  { src: g9,  title: "Things I Want To Say",   album: "Single",     date: "2023", note: "Released independently." },
+  { src: g12, title: "Mood Reference",         album: "Atmosphere", date: "2024", note: "La atmósfera que inspira cada tema.",            wide: true },
 ];
 
 export function Gallery() {
   const { t } = useI18n();
-  const [i, setI] = useState(0);
-
-  const next = () => setI((p) => (p + 1) % frames.length);
-  const prev = () => setI((p) => (p - 1 + frames.length) % frames.length);
-
-  const cur = frames[i];
+  const [open, setOpen] = useState<Tile | null>(null);
+  const [muted, setMuted] = useState(true);
+  const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <Section
@@ -198,172 +56,214 @@ export function Gallery() {
       title={t.gallery.title}
       subtitle={t.gallery.subtitle}
     >
-      {/* Cinematic film frame */}
-      <div className="relative">
-        {/* Top film perforations */}
-        <div className="mb-4 flex h-4 items-center gap-2 opacity-40 overflow-hidden">
-          {Array.from({ length: 32 }).map((_, k) => (
-            <span key={k} className="h-3 w-6 rounded-sm bg-white/10" />
-          ))}
-        </div>
-
-        <div className="relative grid gap-8 md:grid-cols-[2.3fr_0.7fr] items-stretch">
-          {/* Main Viewer */}
-          <div className="relative min-h-[520px] overflow-hidden rounded-3xl border border-white/10 bg-black md:min-h-[700px] shadow-2xl">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={cur.src}
-                initial={{ opacity: 0, scale: 1.04 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                transition={{
-                  duration: 1.1,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="absolute inset-0"
-              >
-                {/* Image */}
-                <motion.img
-                  src={cur.src}
-                  alt={cur.title}
-                  initial={{
-                    filter: "grayscale(100%) brightness(0.8)",
-                    scale: 1.08,
-                  }}
-                  animate={{
-                    filter: "grayscale(0%) brightness(1)",
-                    scale: 1,
-                  }}
-                  transition={{
-                    duration: 2,
-                    ease: "easeOut",
-                  }}
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-
-                {/* Cinematic overlay */}
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_45%,rgba(0,0,0,0.78)_100%)]" />
-
-                {/* Film grain */}
-                <div className="pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-screen bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')]" />
-
-                {/* Scan line */}
-                <div className="pointer-events-none absolute left-0 right-0 top-1/2 h-px bg-white/10" />
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Frame counter */}
-            <div className="absolute left-5 top-5 z-20 font-mono text-[10px] uppercase tracking-[0.45em] text-white/70">
-              {String(i + 1).padStart(2, "0")} /{" "}
-              {String(frames.length).padStart(2, "0")}
-            </div>
-
-            {/* REC */}
-            <div className="absolute right-5 top-5 z-20 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.35em] text-red-400">
-              <span className="h-2 w-2 rounded-full bg-red-500 animate-pulse" />
-              REC
-            </div>
-
-            {/* Controls */}
-            <button
-              onClick={prev}
-              aria-label="Previous"
-              className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full border border-white/20 bg-black/40 p-3 text-white/80 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:text-white"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-
-            <button
-              onClick={next}
-              aria-label="Next"
-              className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full border border-white/20 bg-black/40 p-3 text-white/80 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:text-white"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
-
-          {/* Info Panel */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={cur.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col justify-between rounded-3xl glass p-7 backdrop-blur-xl"
-            >
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.45em] text-muted-foreground">
-                  {cur.album} · {cur.date}
-                </p>
-
-                <h3 className="mt-3 font-editorial text-4xl leading-tight text-foreground">
-                  {cur.title}
-                </h3>
-
-                <p className="mt-2 text-xs uppercase tracking-[0.35em] text-muted-foreground">
-                  {cur.place}
-                </p>
-
-                <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-                  {cur.note}
-                </p>
-              </div>
-
-              {/* Progress indicators */}
-              <div className="mt-8 flex gap-2">
-                {frames.map((_, k) => (
-                  <button
-                    key={k}
-                    onClick={() => setI(k)}
-                    aria-label={`Go to frame ${k + 1}`}
-                    className={`transition-all duration-500 ${
-                      k === i
-                        ? "h-[3px] w-14 bg-white"
-                        : "h-[2px] w-8 bg-white/20 hover:bg-white/50"
-                    }`}
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* Bottom film perforations */}
-        <div className="mt-4 flex h-4 items-center gap-2 opacity-40 overflow-hidden">
-          {Array.from({ length: 32 }).map((_, k) => (
-            <span key={k} className="h-3 w-6 rounded-sm bg-white/10" />
-          ))}
-        </div>
+      {/* Header bar */}
+      <div className="mb-10 flex items-end justify-between border-b border-white/8 pb-5">
+        <p className="text-[11px] uppercase tracking-[0.38em] text-white/35">
+          Visual archive · {new Date().getFullYear()}
+        </p>
+        <p className="font-mono text-[10px] uppercase tracking-[0.45em] text-white/35">
+          {String(tiles.length).padStart(2, "0")} frames
+        </p>
       </div>
 
-      {/* Thumbnails */}
-      <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {frames.map((f, k) => (
-          <button
-            key={f.title}
-            onClick={() => setI(k)}
-            className={`group relative aspect-[5/4] overflow-hidden rounded-2xl border transition-all duration-500 ${
-              k === i
-                ? "border-white scale-[1.02]"
-                : "border-white/10 hover:border-white/40"
-            }`}
+      {/* ── Bento grid ── */}
+      <div
+        className="grid gap-3 md:gap-4"
+        style={{
+          gridTemplateColumns: "repeat(12, 1fr)",
+          gridAutoRows: "clamp(140px, 18vw, 260px)",
+        }}
+      >
+        {tiles.map((tile, i) => {
+          // Build grid-column / grid-row spans
+          let colSpan = "span 4";   // default: 4 of 12
+          let rowSpan = "span 1";
+
+          if (tile.featured) { colSpan = "span 5"; rowSpan = "span 2"; }
+          else if (tile.wide && tile.tall) { colSpan = "span 6"; rowSpan = "span 2"; }
+          else if (tile.wide)  { colSpan = "span 6"; }
+          else if (tile.tall)  { colSpan = "span 3"; rowSpan = "span 2"; }
+
+          return (
+            <motion.button
+              key={tile.title + i}
+              onClick={() => setOpen(tile)}
+              onHoverStart={() => setHovered(i)}
+              onHoverEnd={() => setHovered(null)}
+              initial={{ opacity: 0, y: 28, filter: "blur(6px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.75, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
+              style={{ gridColumn: colSpan, gridRow: rowSpan }}
+              className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-black text-left"
+            >
+              {/* Image / video */}
+              {tile.video ? (
+                <video
+                  src={tile.video}
+                  poster={tile.src}
+                  autoPlay muted loop playsInline
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-105"
+                />
+              ) : (
+                <img
+                  src={tile.src}
+                  alt={tile.title}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover grayscale transition-all duration-[1.2s] ease-out group-hover:scale-[1.07] group-hover:grayscale-0"
+                />
+              )}
+
+              {/* Gradient overlays */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/50" />
+
+              {/* Shine on hover */}
+              <motion.div
+                className="pointer-events-none absolute inset-0"
+                initial={{ background: "linear-gradient(120deg, transparent 40%, rgba(255,255,255,0) 50%, transparent 60%)" }}
+                animate={hovered === i
+                  ? { background: "linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.07) 50%, transparent 60%)" }
+                  : { background: "linear-gradient(120deg, transparent 40%, rgba(255,255,255,0) 50%, transparent 60%)" }
+                }
+                transition={{ duration: 0.5 }}
+              />
+
+              {/* Video badge */}
+              {tile.video && (
+                <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-black/65 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.25em] text-white/80 backdrop-blur">
+                  <Play className="h-2 w-2" fill="currentColor" /> Video
+                </span>
+              )}
+
+              {/* Metadata — always visible, slides up on hover */}
+              <div className="absolute inset-x-4 bottom-4">
+                {/* Index number */}
+                <p className="mb-1.5 font-mono text-[9px] text-white/30 transition-opacity duration-300 group-hover:text-white/50">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+
+                <motion.div
+                  animate={hovered === i ? { y: 0, opacity: 1 } : { y: 8, opacity: 0.7 }}
+                  transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <p className="font-mono text-[9px] uppercase tracking-[0.4em] text-white/50">
+                    {tile.album} · {tile.date}
+                  </p>
+                  <h3
+                    className="mt-0.5 font-display font-semibold text-white leading-tight"
+                    style={{ fontSize: tile.featured ? "1.25rem" : "0.875rem" }}
+                  >
+                    {tile.title}
+                  </h3>
+                  <p
+                    className="mt-1.5 text-white/55 leading-snug transition-all duration-500"
+                    style={{
+                      fontSize: "0.72rem",
+                      maxHeight: hovered === i ? "3rem" : "0",
+                      overflow: "hidden",
+                      opacity: hovered === i ? 1 : 0,
+                    }}
+                  >
+                    {tile.note}
+                  </p>
+                </motion.div>
+              </div>
+
+              {/* Arrow icon — top right on hover */}
+              <motion.div
+                className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/50 text-white backdrop-blur"
+                initial={{ opacity: 0, scale: 0.7 }}
+                animate={hovered === i ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.7 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+              >
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </motion.div>
+            </motion.button>
+          );
+        })}
+      </div>
+
+      {/* ── Lightbox ── */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
+            onClick={() => setOpen(null)}
           >
-            <img
-              src={f.src}
-              alt={f.title}
-              className={`h-full w-full object-cover transition-all duration-700 ${
-                k === i
-                  ? "scale-105"
-                  : "grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100"
-              }`}
+            {/* Backdrop */}
+            <motion.div
+              className="absolute inset-0 bg-black/92 backdrop-blur-xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
             />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/20 transition-opacity duration-500 group-hover:bg-black/0" />
-          </button>
-        ))}
-      </div>
+            <motion.div
+              initial={{ scale: 0.92, opacity: 0, y: 32 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 16 }}
+              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+              className="relative z-10 w-full max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-black shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Media */}
+              <div className="relative aspect-video bg-black">
+                {open.video ? (
+                  <video
+                    src={open.video}
+                    poster={open.src}
+                    autoPlay loop playsInline muted={muted}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                ) : (
+                  <img
+                    src={open.src}
+                    alt={open.title}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                )}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/15 to-transparent" />
+
+                {/* Controls */}
+                <div className="absolute right-4 top-4 z-20 flex gap-2">
+                  {open.video && (
+                    <button
+                      onClick={() => setMuted((m) => !m)}
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white/80 backdrop-blur-md transition-all hover:scale-110 hover:text-white"
+                    >
+                      {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+                    </button>
+                  )}
+                  <button
+                    onClick={() => setOpen(null)}
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/55 text-white/80 backdrop-blur-md transition-all hover:scale-110 hover:text-white"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+
+                {/* Lightbox metadata */}
+                <div className="absolute inset-x-7 bottom-7">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.42em] text-white/55">
+                    {open.album} · {open.date}
+                  </p>
+                  <h2 className="mt-1 font-music text-4xl text-white sm:text-6xl leading-none">
+                    {open.title}
+                  </h2>
+                  <p className="mt-3 max-w-xl text-sm text-white/60 leading-relaxed">
+                    {open.note}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Section>
   );
 }
