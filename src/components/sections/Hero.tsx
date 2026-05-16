@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
-import heroImg from "@/assets/hero-artist.jpg";
+import heroImg from "@/assets/textures/paper.jpg";
 
 const SPOTIFY_URL =
   "https://open.spotify.com/intl-es/artist/1DNdeBjys6meGT7oO65CnQ";
@@ -13,38 +13,18 @@ export function Hero() {
       id="home"
       className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-black"
     >
-      {/* Portrait — cinematic, full bleed */}
-      <motion.div
-        initial={{ opacity: 0, scale: 1.05 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute inset-y-0 right-0 hidden w-[62%] md:block"
-      >
-        <div className="relative h-full w-full">
-          <img
-            src={heroImg}
-            alt="Portrait of BrayanJSR"
-            width={1536}
-            height={1536}
-            className="h-full w-full object-cover object-center opacity-90 grayscale contrast-125 [mask-image:linear-gradient(to_left,black_25%,transparent_98%)]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/30 to-transparent" />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(0,0,0,0.85)_100%)]" />
-        </div>
-      </motion.div>
-
-      {/* Mobile portrait backdrop */}
-      <div className="absolute inset-0 md:hidden">
+      {/* FULL BACKGROUND IMAGE (FIXED) */}
+      <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt=""
-          aria-hidden
-          className="h-full w-full object-cover object-center opacity-40 grayscale contrast-125"
+          alt="Portrait of BrayanJSR"
+          className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/80 to-black" />
+        {/* overlay suave para legibilidad */}
+        <div className="absolute inset-0 bg-black/30 md:bg-black/20" />
       </div>
 
-      {/* Subtle horizontal scan line */}
+      {/* scan line */}
       <div className="pointer-events-none absolute left-0 right-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col px-6 pt-32">
@@ -61,12 +41,14 @@ export function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, delay: 0.3 }}
           className="font-hero text-[20vw] leading-[0.82] text-foreground sm:text-8xl md:text-[10rem] lg:text-[13rem]"
         >
           Brayan
           <br />
-          <span className="font-editorial italic font-normal text-gradient">JSR</span>
+          <span className="font-editorial italic font-normal text-gradient">
+            JSR
+          </span>
         </motion.h1>
 
         <motion.p
@@ -88,33 +70,26 @@ export function Hero() {
             href={SPOTIFY_URL}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_40px_var(--glow-soft)]"
+            className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all duration-300 hover:scale-[1.03]"
           >
             <span className="h-2 w-2 rounded-full bg-primary-foreground" />
             {t.hero.listen}
           </a>
+
           <a
             href="#music"
-            className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium text-foreground hover:bg-white/10"
           >
             {t.hero.explore}
           </a>
+
           <a
             href="#socials"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-muted-foreground hover:text-foreground"
           >
             {t.hero.socials} →
           </a>
         </motion.div>
-
-        <div className="mt-24 flex justify-center pb-10 md:mt-32">
-          <div className="flex flex-col items-center gap-2 text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
-            {t.hero.scroll}
-            <span className="relative block h-10 w-px overflow-hidden bg-white/10">
-              <span className="absolute left-0 top-0 block h-3 w-px bg-primary animate-scroll-down" />
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );

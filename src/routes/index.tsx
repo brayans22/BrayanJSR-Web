@@ -9,6 +9,7 @@ import { Merch } from "@/components/sections/Merch";
 import { Tour } from "@/components/sections/Tour";
 import { Gallery } from "@/components/sections/Gallery";
 import { Socials } from "@/components/sections/Socials";
+import textureBackground from "@/assets/textures/paper.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -16,7 +17,16 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="relative bg-background text-foreground md:pl-[120px]">
+    <main
+      className="relative text-foreground md:pl-[120px]"
+      style={{
+        backgroundImage: `url(${textureBackground})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <Navbar />
       <Hero />
       <About />
