@@ -16,7 +16,6 @@ import g9 from "@/assets/covers/Singles/Think.jpg";
 import g10 from "@/assets/covers/Singles/WY.jpg";
 import g11 from "@/assets/covers/Singles/sky_bleu.jpg";
 import g12 from "@/assets/about-me-section.jpg";
-import g13 from "@/assets/hero-artist.jpg";
 
 type Tile = {
   src: string;

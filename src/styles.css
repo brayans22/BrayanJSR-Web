@@ -259,7 +259,7 @@
   }
 
   body {
-    background-image: url("./assets/textures/paper.jpg");
+    background-image: url("./assets/textures/paper_not_YinYang.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

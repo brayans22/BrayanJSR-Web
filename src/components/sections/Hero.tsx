@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
-import heroImg from "@/assets/textures/paper.jpg";
+import texturePaper from "@/assets/textures/paper_not_YinYang.png";
 
 const SPOTIFY_URL =
   "https://open.spotify.com/intl-es/artist/1DNdeBjys6meGT7oO65CnQ";
@@ -13,14 +13,12 @@ export function Hero() {
       id="home"
       className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-black"
     >
-      {/* FULL BACKGROUND IMAGE (FIXED) */}
       <div className="absolute inset-0">
         <img
-          src={heroImg}
+          src={texturePaper}
           alt="Portrait of BrayanJSR"
           className="h-full w-full object-cover object-center"
         />
-        {/* overlay suave para legibilidad */}
         <div className="absolute inset-0 bg-black/30 md:bg-black/20" />
       </div>
 
